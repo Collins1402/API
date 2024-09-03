@@ -20,3 +20,16 @@ function getForLoops(){
 }
 
 getForLoops();
+
+// Iteration
+function getIteration(){
+    let names = ["Alice", "Bob", "Charlie", "David"];
+
+    for (let i = 0; i < names.length; i++) {
+        let name = names[i];
+        console.log("Hello, " + name + "!");
+}
+
+}
+
+getIteration();
