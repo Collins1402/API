@@ -9,3 +9,12 @@ function Area(){
 }
 
 Area();
+
+//Calculate remainder
+function getRemainder(){
+    let dividend = 17;
+    let divisor = 5;
+    let remainder = dividend % divisor;
+
+console.log("The remainder is:", remainder);
+}
