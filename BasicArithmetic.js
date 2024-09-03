@@ -18,3 +18,19 @@ function getRemainder(){
 
 console.log("The remainder is:", remainder);
 }
+
+getRemainder();
+
+//Swapping variables
+function swapVariables(){
+    let x = 10;
+    let y = 20;
+
+    // Swap the values
+    x = x + y;
+    y = x - y;
+    x = x - y;
+
+    console.log(x); 
+    console.log(y); 
+}
