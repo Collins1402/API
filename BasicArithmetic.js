@@ -34,3 +34,5 @@ function swapVariables(){
     console.log(x); 
     console.log(y); 
 }
+
+swapVariables();
