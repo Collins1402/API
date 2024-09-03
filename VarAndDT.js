@@ -22,4 +22,14 @@ let ans=add(42);
 console.log(ans);
 
 
-//Creating a null varriable
+//Creating a null varriable and an undefined one
+function nullVariable(){
+    let nullVar = null;
+    let undefinedVar;
+    
+    console.log(nullVar);
+    console.log(undefinedVar);
+}
+
+nullVariable();
+
