@@ -26,5 +26,4 @@ Create a README.md file with detailed instructions for:
 • Testing the API endpoints manually or with the provided Python script.
 Upload your project, including all code and documentation, to a GitHub repository.'''
 
-
 from flask import Flask, request, jsonify
