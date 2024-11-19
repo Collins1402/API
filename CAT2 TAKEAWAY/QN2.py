@@ -1,3 +1,6 @@
+# Version: 1.0
+from flask import Flask, request, jsonify
+
 '''Building a REST API Using Python
 a) REST API Setup:
 Build a simple REST API in Python using any Python web framework or a custom HTTP
@@ -26,4 +29,27 @@ Create a README.md file with detailed instructions for:
 • Testing the API endpoints manually or with the provided Python script.
 Upload your project, including all code and documentation, to a GitHub repository.'''
 
-from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+products = []
+
+@app.route('/products', methods=['POST'])
+def add_product():
+    data = request.get_json()
+    if not data or not all(key in data for key in ('name', 'description', 'price')):
+        return jsonify({'error': 'Invalid data'}), 400
+    product = {
+        'name': data['name'],
+        'description': data['description'],
+        'price': data['price']
+    }
+    products.append(product)
+    return jsonify(product), 201
+
+@app.route('/products', methods=['GET'])
+def get_products():
+    return jsonify(products), 200
+
+if __name__ == '__main__':
+    app.run(debug=True)
